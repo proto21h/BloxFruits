@@ -1605,7 +1605,7 @@ local Module = {} do
       if self.EnemyRootPart then
         RE_RegisterAttack:FireServer(Cooldown)
         
-        if SUCCESS_FLAGS and COMBAT_REMOTE_THREAD and SUCCESS_HIT and HIT_FUNCTION then
+        if SUCCESS_FLAGS and COMBAT_REMOTE_THREAD and SUCCESS_HIT then
           HIT_FUNCTION(self.EnemyRootPart, BladeHits)
         elseif SUCCESS_FLAGS and not COMBAT_REMOTE_THREAD then
           RE_RegisterHit:FireServer(self.EnemyRootPart, BladeHits)
